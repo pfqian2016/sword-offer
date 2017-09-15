@@ -13,3 +13,14 @@ function numberOf1(n) {
     }
     return count;
 }
+/**
+ * The most effective way
+ */
+function numberOf1_1(n) {
+    let count = 0;
+    while(n) {
+        ++count;
+        n = n & (n - 1);
+    }
+    return count;
+}
